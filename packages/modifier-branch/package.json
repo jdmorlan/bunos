@@ -1,0 +1,18 @@
+{
+  "name": "@bunos/modifier-branch",
+  "version": "0.0.0",
+  "description": "Branch based feature deployments based on query-string value",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bscroggins",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "4.17.15",
+    "query-string": "6.11.0"
+  }
+}

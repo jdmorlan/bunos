@@ -1,0 +1,11 @@
+{
+  "name": "@bunos/query-meta-path",
+  "version": "0.0.0",
+  "description": "Get proxy meta from request url pathname",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jmorlan",
+  "license": "ISC"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "test": "jest --watch"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "jest": "^25.1.0",
+    "lerna": "^3.20.2",
+    "node-mocks-http": "^1.8.1",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "fast-proxy": "^1.4.1",
+    "query-string": "^6.11.0"
+  }
+}
