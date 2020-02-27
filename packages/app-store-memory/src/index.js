@@ -18,6 +18,13 @@ class MemoryAppStore {
     this._apps = keyBy(apps, "id");
   }
 
+  async add(opts) {
+    const application = (this._apps[opts.id] = opts);
+    const response = buildResponse(application);
+
+    return Promise.resolve(response);
+  }
+
   async get(appId) {
     const application = this._apps[appId];
     const response = buildResponse(application);

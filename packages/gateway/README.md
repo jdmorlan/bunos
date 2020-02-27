@@ -13,14 +13,19 @@ npm install @bunos/gateway
 
 ```
 const express = require('express');
-const { Gateway } = require('@bunos/gateway');
+const { buildGateway } = require('@bunos/gateway');
+const MemoryAppStore = require('@bunos/app-store-memory');
 const appPathModifier = require('@bunos/modifier-app-path');
 
 const app = express();
 
 app.use(auth()) // Your own auth middleware
 
-const gateway = new Gateway();
+const gateway = buildGateway({
+  appStore: new MemoryAppStore(),
+  environment: 'stage' // wherever you store your production environment variable
+});
+
 gateway.useModifier(appPathModifier);
 
 app.use(gateway.run)

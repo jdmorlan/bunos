@@ -1,0 +1,17 @@
+{
+  "name": "@bunos/app-store-graphql",
+  "version": "0.0.0",
+  "description": "GraphQL server for managing app stores",
+  "main": "src/index.js",
+  "author": "jdmorlan",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "2.10.1",
+    "graphql-scalars": "1.0.6",
+    "lodash": "4.17.15"
+  },
+  "devDependencies": {
+    "express": "4.17.1",
+    "@bunos/app-store-memory": "^0.0.0"
+  }
+}

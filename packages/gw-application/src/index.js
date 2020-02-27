@@ -16,6 +16,10 @@ class Application {
   get target() {
     return new Target(this._app.target);
   }
+
+  toJS() {
+    return this._app;
+  }
 }
 
 module.exports = Application;
