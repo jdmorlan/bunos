@@ -1,5 +1,16 @@
 const keyBy = require("lodash/keyBy");
-const Application = require("./application");
+const Application = require("@bunos/gw-application");
+
+const buildResponse = application => {
+  if (!application) {
+    return { found: false, application: null };
+  }
+
+  return {
+    found: true,
+    application: new Application(application)
+  };
+};
 
 class MemoryAppStore {
   constructor(opts = {}) {
@@ -9,19 +20,22 @@ class MemoryAppStore {
 
   async get(appId) {
     const application = this._apps[appId];
-    return Promise.resolve(new Application(application));
+    const response = buildResponse(application);
+
+    return Promise.resolve(response);
   }
 
   async search(opts) {
-    const { applicationName, environment } = opts;
-    const application = this._apps.find(application => {
+    const apps = Object.values(this._apps);
+
+    const application = apps.find(app => {
       return (
-        application.name === applicationName &&
-        application.environment === environment
+        app.name === opts.application && app.environment === opts.environment
       );
     });
 
-    return Promise.resolve(new Application(application));
+    const response = buildResponse(application);
+    return Promise.resolve(response);
   }
 }
 

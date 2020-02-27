@@ -1,11 +1,12 @@
 {
-  "name": "@bunos/query-meta-path",
+  "name": "@bunos/modifier-app-path",
   "version": "0.0.0",
   "description": "Get proxy meta from request url pathname",
   "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "keywords": [
+    "bunos",
+    "gateway"
+  ],
   "author": "jmorlan",
   "license": "ISC"
 }

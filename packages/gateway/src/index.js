@@ -1,9 +1,9 @@
-const Gateway = require("./gateway");
+const buildGateway = require("./build-gateway");
 const Modifier = require("./modifier");
 const Responder = require("./responder");
 
 module.exports = {
-  Gateway,
+  buildGateway,
   Modifier,
   Responder
 };

@@ -1,0 +1,16 @@
+{
+  "name": "@bunos/app-store-memory",
+  "version": "0.0.0",
+  "description": "Store application metadata in memory",
+  "main": "src/index.js",
+  "author": "jdmorlan",
+  "license": "ISC",
+  "keywords": [
+    "bunos",
+    "gateway"
+  ],
+  "dependencies": {
+    "@bunos/gw-application": "^0.0.0",
+    "lodash": "4.17.15"
+  }
+}

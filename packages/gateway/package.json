@@ -1,0 +1,23 @@
+{
+  "name": "@bunos/gateway",
+  "version": "0.0.0",
+  "description": "Gateway for proxying http requests",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "bunos",
+    "gateway"
+  ],
+  "author": "jdmorlan",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "4.17.15"
+  },
+  "devDependencies": {
+    "@bunos/app-store-memory": "^0.0.0",
+    "@bunos/modifier-app-path": "^0.0.0",
+    "@bunos/responder-http": "^0.0.0"
+  }
+}

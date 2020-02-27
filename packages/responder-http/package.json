@@ -1,0 +1,18 @@
+{
+  "name": "@bunos/responder-http",
+  "version": "0.0.0",
+  "description": "Proxy requests through HTTP Proxy",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "bunos",
+    "gateway"
+  ],
+  "author": "jdmorlan",
+  "license": "ISC",
+  "dependencies": {
+    "fast-proxy": "1.4.1"
+  }
+}

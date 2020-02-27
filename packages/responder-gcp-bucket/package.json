@@ -1,0 +1,15 @@
+{
+  "name": "@bunos/responder-gcp-bucket",
+  "version": "0.0.0",
+  "description": "Proxy requests to Google Cloud Storage bucket files",
+  "main": "src/index.js",
+  "author": "jdmorlan",
+  "license": "ISC",
+  "keywords": [
+    "bunos",
+    "gateway"
+  ],
+  "dependencies": {
+    "@google-cloud/storage": "4.3.1"
+  }
+}
