@@ -1,6 +1,6 @@
 const runModifier = require("./run-modifier");
 
-class ProxyMeta {
+class Modifier {
   constructor() {
     this._middlewares = [];
   }
@@ -9,13 +9,17 @@ class ProxyMeta {
     this._middlewares.push(middleware);
   }
 
+  get size() {
+    return this._middlewares.length;
+  }
+
   async run(request) {
-    const proxyMeta = await runModifier(request, {
+    const modificationResult = await runModifier(request, {
       middlewares: this._middlewares
     });
 
-    return proxyMeta;
+    return modificationResult;
   }
 }
 
-module.exports = ProxyMeta;
+module.exports = Modifier;

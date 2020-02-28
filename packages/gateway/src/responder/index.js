@@ -27,6 +27,14 @@ class Responder extends EventEmitter {
     this._responders.push(responderKlass);
   }
 
+  get keys() {
+    return this._responders.map(x => x.key);
+  }
+
+  get size() {
+    return this._responders.length;
+  }
+
   getResponder(opts) {
     const { target } = opts;
     return this._responders.find(x => x.key === target.type);

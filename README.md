@@ -12,9 +12,11 @@ const MemoryAppStore = require('@bunos/app-store-memory');
 const appPathModifier = require('@bunos/modifier-app-path');
 const HTTPResponder = request('@bunos/responder-http')'
 
-const server = buildGateway({
+const gateway = buildGateway({
   appStore: new MemoryAppStore(),
-  environment: 'stage'
+  environment: 'stage',
+  modifiers: [appPathModifier],
+  responders: [HTTPResponder]
 });
 
 const app = express();

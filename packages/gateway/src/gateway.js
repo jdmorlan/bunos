@@ -1,8 +1,30 @@
 const { EventEmitter } = require("events");
+const isNil = require("lodash/isNil");
+const isEmpty = require("lodash/isEmpty");
+const { InvalidGatewayOptions } = require("./errors");
+
+const validateOptions = opts => {
+  const keys = ["appStore", "environment", "modifier", "responder"];
+  const errors = [];
+
+  keys.forEach(key => {
+    const value = opts[key];
+
+    if (isNil(value)) {
+      errors.push({ option: key, value: value });
+    }
+  });
+
+  if (!isEmpty(errors)) {
+    throw new InvalidGatewayOptions(errors);
+  }
+};
 
 class Gateway extends EventEmitter {
   constructor(opts = {}) {
     super();
+
+    validateOptions(opts);
 
     this._modifier = opts.modifier;
     this._responder = opts.responder;
@@ -10,6 +32,14 @@ class Gateway extends EventEmitter {
     this._environment = opts.environment;
 
     this.run = this.run.bind(this);
+  }
+
+  get responder() {
+    return this._responder;
+  }
+
+  get modifier() {
+    return this._modifier;
   }
 
   useModifier(middleware) {

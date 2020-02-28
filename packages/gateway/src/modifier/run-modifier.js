@@ -11,7 +11,7 @@ module.exports = async (request, opts) => {
   let result = {};
 
   for (const middleware of middlewares) {
-    const middlewareResult = await middleware(request);
+    const middlewareResult = await middleware(request, result);
     merge(result, middlewareResult);
   }
 

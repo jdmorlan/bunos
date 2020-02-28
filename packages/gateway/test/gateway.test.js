@@ -2,7 +2,7 @@ const express = require("express");
 const httpMocks = require("node-mocks-http");
 const request = require("supertest");
 
-const { buildGateway } = require("../src");
+const { buildGateway, InvalidGatewayOptions } = require("../src");
 const HttpResponder = require("@bunos/responder-http");
 const MemoryAppStore = require("@bunos/app-store-memory");
 const appPathModifier = require("@bunos/modifier-app-path");
@@ -30,8 +30,44 @@ const applications = [
 ];
 
 describe("Gateway", () => {
-  test("can initialize", () => {
-    const gateway = buildGateway({ appStore: new MemoryAppStore() });
+  describe("Build Gateway", () => {
+    test("can build", () => {
+      const gateway = buildGateway({
+        appStore: new MemoryAppStore(),
+        environment: "stage"
+      });
+
+      expect(typeof gateway.run).toBe("function");
+    });
+
+    test("can apply modifiers", () => {
+      const gateway = buildGateway({
+        appStore: new MemoryAppStore(),
+        environment: "stage",
+        modifiers: [appPathModifier]
+      });
+
+      expect(gateway.modifier.size).toBe(1);
+    });
+
+    test("can apply responders", () => {
+      const gateway = buildGateway({
+        appStore: new MemoryAppStore(),
+        environment: "stage",
+        responders: [HttpResponder]
+      });
+
+      expect(gateway.responder.keys).toContain("SERVER");
+      expect(gateway.responder.size).toBe(1);
+    });
+
+    test("must pass environment opt", () => {
+      expect(() => {
+        buildGateway({
+          appStore: new MemoryAppStore()
+        });
+      }).toThrow(InvalidGatewayOptions);
+    });
   });
 
   describe("Metadata", () => {
@@ -53,7 +89,10 @@ describe("Gateway", () => {
       expect(meta.data.application.name).toBe("eog");
     });
     test("App Not Found", async () => {
-      const gateway = buildGateway({ appStore: new MemoryAppStore() });
+      const gateway = buildGateway({
+        appStore: new MemoryAppStore(),
+        environment: "stage"
+      });
 
       gateway.useModifier(appPathModifier);
       const request = httpMocks.createRequest({
