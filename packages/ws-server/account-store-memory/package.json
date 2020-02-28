@@ -1,0 +1,13 @@
+{
+  "name": "@bunos/account-store-memory",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {},
+  "dependencies": {
+    "@bunos/account": "^0.0.0",
+    "immutable": "^4.0.0-rc.12"
+  },
+  "author": "jmorlan",
+  "license": "ISC"
+}

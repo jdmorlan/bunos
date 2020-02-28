@@ -2,6 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
+    "packages:list": "lerna ls",
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
     "test": "jest --verbose",

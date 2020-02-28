@@ -1,0 +1,12 @@
+{
+  "name": "@bunos/account",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {},
+  "author": "jmorlan",
+  "license": "ISC",
+  "dependencies": {
+    "cloudevents-sdk": "^1.0.0"
+  }
+}

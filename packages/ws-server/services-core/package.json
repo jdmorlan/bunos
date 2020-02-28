@@ -1,0 +1,16 @@
+{
+  "name": "services-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@bunos/ws-management-api": "^0.0.0",
+    "@bunos/account-store-memory": "^0.0.0",
+    "@bunos/web-socket": "^0.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

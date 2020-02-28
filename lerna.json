@@ -1,6 +1,4 @@
 {
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/gateway/*", "packages/ws-server/*"],
   "version": "0.0.0"
 }

@@ -1,0 +1,12 @@
+{
+  "name": "@bunos/web-socket",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {},
+  "dependencies": {
+    "ws": "^7.2.1"
+  },
+  "author": "jmorlan",
+  "license": "ISC"
+}
