@@ -1,4 +1,4 @@
 {
-  "packages": ["packages/gateway/*", "packages/ws-server/*"],
+  "packages": ["packages/gateway/*", "packages/ws-server/*", "packages/abac/*"],
   "version": "0.0.0"
 }

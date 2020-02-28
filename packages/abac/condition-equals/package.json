@@ -1,0 +1,8 @@
+{
+  "name": "@bunos/condition-equals",
+  "version": "0.0.0",
+  "description": "Equals Condition Handler",
+  "main": "src/index.js",
+  "author": "jdmorlan",
+  "license": "ISC"
+}

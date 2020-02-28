@@ -1,0 +1,14 @@
+{
+  "name": "@bunos/policy-store-memory",
+  "version": "0.0.0",
+  "description": "Memory store for access-control policies",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@bunos/access-control": "^0.0.0"
+  },
+  "author": "jdmorlan",
+  "license": "ISC"
+}

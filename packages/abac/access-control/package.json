@@ -1,0 +1,14 @@
+{
+  "name": "@bunos/access-control",
+  "version": "0.0.0",
+  "description": "Attribute Based Access Control",
+  "main": "src/index.js",
+  "dependencies": {
+    "@bunos/condition-equals": "^0.0.0",
+    "@bunos/condition-contains": "^0.0.0",
+    "jsonpath-plus": "^3.0.0",
+    "lodash": "^4.17.15"
+  },
+  "author": "jdmorlan",
+  "license": "ISC"
+}

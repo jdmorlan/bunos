@@ -26,5 +26,11 @@ module.exports = {
         id: 'ws-server/getting-started',
       },
     ],
+    'Access Control': [
+      {
+        type: 'doc',
+        id: 'abac/getting-started',
+      },
+    ],
   },
 };

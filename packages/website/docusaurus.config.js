@@ -10,11 +10,11 @@
 module.exports = {
   title: 'Bunos',
   tagline: 'Foundation for your application',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://git.eogresources.com',
+  baseUrl: '/pages/jmorlan/bunos/',
   favicon: 'img/favicon.ico',
   organizationName: 'jmorlan', // Usually your GitHub org/user name.
-  projectName: 'gateway', // Usually your repo name.
+  projectName: 'bunos', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'Bunos',

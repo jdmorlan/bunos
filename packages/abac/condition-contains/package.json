@@ -1,0 +1,8 @@
+{
+  "name": "@bunos/condition-contains",
+  "version": "0.0.0",
+  "description": "Contains Condition Handler",
+  "main": "src/index.js",
+  "author": "jdmorlan",
+  "license": "ISC"
+}
