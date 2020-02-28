@@ -2,6 +2,27 @@
 
 A collection of components that provide a dynamic gateway proxy server.
 
+## Basic Usage
+
+```
+const express = require('express');
+
+const { buildGateway } = require('@bunos/gateway');
+const MemoryAppStore = require('@bunos/app-store-memory');
+const appPathModifier = require('@bunos/modifier-app-path');
+const HTTPResponder = request('@bunos/responder-http')'
+
+const server = buildGateway({
+  appStore: new MemoryAppStore(),
+  environment: 'stage'
+});
+
+const app = express();
+app.use(gateway.run);
+
+app.listen(4000, () => `Gateway listening on port: 4000`);
+```
+
 ## Packages
 
 ### General
