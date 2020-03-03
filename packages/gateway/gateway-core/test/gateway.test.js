@@ -54,7 +54,7 @@ describe("Gateway", () => {
       const gateway = buildGateway({
         appStore: new MemoryAppStore(),
         environment: "stage",
-        responders: [HttpResponder]
+        responders: [new HttpResponder()]
       });
 
       expect(gateway.responder.keys).toContain("SERVER");
@@ -117,7 +117,7 @@ describe("Gateway", () => {
       });
 
       gateway.useModifier(appPathModifier);
-      gateway.useResponder(HttpResponder);
+      gateway.useResponder(new HttpResponder());
 
       const app = express();
       app.use(gateway.run);

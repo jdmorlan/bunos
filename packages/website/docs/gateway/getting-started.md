@@ -38,7 +38,7 @@ const gateway = buildGateway({
   appStore: new MemoryAppStore({apps: [appTarget]}),
   environment: 'stage',
   modifiers: [appPathModifier],
-  responders: [HTTPResponder],
+  responders: [new HTTPResponder()],
 });
 
 const app = express();

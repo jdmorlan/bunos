@@ -10,21 +10,11 @@ class Responder extends EventEmitter {
   }
 
   register(responder) {
-    let responderKlass = null;
-
-    if (isObject(responder)) {
-      responderKlass = responder;
-    }
-
     if (isFunction(responder)) {
-      responderKlass = new responder();
+      throw new Error("Must provide object as responder");
     }
 
-    if (responder === null) {
-      throw new Error("InvalidResponder");
-    }
-
-    this._responders.push(responderKlass);
+    this._responders.push(responder);
   }
 
   get keys() {
