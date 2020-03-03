@@ -10,10 +10,10 @@
 module.exports = {
   title: 'Bunos',
   tagline: 'Foundation for your application',
-  url: 'https://git.eogresources.com',
-  baseUrl: '/pages/jmorlan/bunos/',
+  url: 'https://jmorlan.github.io',
+  baseUrl: '/bunos/',
   favicon: 'img/favicon.ico',
-  organizationName: 'jmorlan', // Usually your GitHub org/user name.
+  organizationName: 'jdmorlan', // Usually your GitHub org/user name.
   projectName: 'bunos', // Usually your repo name.
   themeConfig: {
     navbar: {
@@ -27,7 +27,7 @@ module.exports = {
         {to: 'blog', label: 'Blog', position: 'left'},
         // Please keep GitHub link to the right for consistency.
         {
-          href: 'https://git.eogresources.com/jmorlan/gateway',
+          href: 'https://github.com/jdmorlan/bunos',
           label: 'GitHub',
           position: 'right',
         },
@@ -54,7 +54,7 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://git.eogresources.com/jmorlan/gateway',
+              href: 'https://github.com/jdmorlan/bunos',
             },
           ],
         },
@@ -65,7 +65,7 @@ module.exports = {
         href: 'https://opensource.facebook.com/',
       },
       // Please do not remove the credits, help to publicize Docusaurus :)
-      copyright: `Copyright © ${new Date().getFullYear()} EOG Resources. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} jdmorlan. Built with Docusaurus.`,
     },
   },
   presets: [
